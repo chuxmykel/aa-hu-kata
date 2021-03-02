@@ -1,13 +1,14 @@
-const { add, subtract } = require('../src');
+const assert = require('assert').strict;
+const { add, subtract } = require('../');
 
 describe('add', () => {
     it('Should add two numbers correctly.', () => {
-        expect(add(2, 7)).toEqual(9);
+        assert.strictEqual(add(2, 7), 9);
     });
 });
 
 describe('subtract', () => {
     it('Should subtract two numbers correctly.', () => {
-        expect(subtract(9, 7)).toEqual(2);
+        assert.strictEqual(subtract(9, 7), 2);
     });
 });
